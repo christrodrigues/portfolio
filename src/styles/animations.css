@@ -1,0 +1,109 @@
+@keyframes breath {
+    from { opacity: 0.3; }
+    to { opacity: 0.5; }
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes jelloVertical {
+    0%, 100% { transform: scale3d(1, 1, 1); }
+    30% { transform: scale3d(0.75, 1.25, 1); }
+    40% { transform: scale3d(1.25, 0.75, 1); }
+    50% { transform: scale3d(0.85, 1.15, 1); }
+    65% { transform: scale3d(1.05, 0.95, 1); }
+    75% { transform: scale3d(0.95, 1.05, 1); }
+  }
+  
+  @keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-down {
+    animation: fadeDown 0.6s ease-out forwards;
+  }
+  
+  .jello-hover {
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  .jello-hover:hover {
+    animation: jelloVertical 0.9s both;
+    color: #FF6B35 !important;
+  }
+  
+  .name-gradient {
+    background: linear-gradient(-45deg, #94B4C1, #547792, #94B4C1, #547792);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .blob {
+    position: absolute;
+    right: -15%;
+    top: 0;
+    background-color: #94B4C1;
+    width: 600px;
+    height: 100vh;
+    filter: blur(300px);
+    opacity: 0.3;
+    animation: breath 3s linear infinite alternate-reverse;
+    z-index: 0;
+  }
+  
+  .cursor-inner {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #94B4C1;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transition: width 0.2s, height 0.2s;
+  }
+  
+  .cursor-outer {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #547792;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: left 0.5s, top 0.5s, width 0.2s, height 0.2s;
+  }
+  
+  @media (max-width: 768px) {
+    .cursor-inner,
+    .cursor-outer {
+      display: none;
+    }
+  }

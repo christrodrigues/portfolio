@@ -1,0 +1,6 @@
+.app {
+  position: relative;
+  background-color: #eae0cf;
+  min-height: 100vh;
+  overflow-x: hidden;
+}

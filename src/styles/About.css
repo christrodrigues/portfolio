@@ -1,0 +1,123 @@
+.about-section {
+    padding: 6rem 1.5rem;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-container {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  
+  .about-header {
+    margin-bottom: 4rem;
+  }
+  
+  .about-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 107, 53, 0.1);
+    color: #FF6B35;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #213448;
+  }
+  
+  .about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .skill-category-featured {
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 2px solid rgba(255, 107, 53, 0.2);
+    background: linear-gradient(to right, rgba(255, 107, 53, 0.1), rgba(255, 133, 85, 0.1));
+    transition: all 0.3s ease;
+  }
+  
+  .skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-category-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #213448;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .skill-tag {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid rgba(148, 180, 193, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #213448;
+  }
+  
+  .skill-tag:hover {
+    color: #FF6B35;
+    border-color: #FF6B35;
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.2);
+  }
+  
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .skill-category {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background-color: #EAE0CF;
+    transition: all 0.3s ease;
+  }
+  
+  .skill-category:hover {
+    transform: translateY(-4px);
+  }
+  
+  .skill-tag-secondary {
+    padding: 0.375rem 0.75rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #547792;
+  }
+  
+  .skill-tag-secondary:hover {
+    color: #213448;
+    transform: scale(1.05);
+  }
+  
+  @media (min-width: 768px) {
+    .skill-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
